@@ -67,8 +67,12 @@ function getAverage(value1, value2) {
  *   (0,0) (1,0)    => 1
  *   (-5,0) (10,-10) => 18.027756377319946
  */
-function getDistanceBetweenPoints(/* x1, y1, x2, y2 */) {
-  throw new Error('Not implemented');
+function getDistanceBetweenPoints(x1, y1, x2, y2) {
+  const pointX = (x2 - x1) ** 2;
+  const pointY = (y2 - y1) ** 2;
+  const sumPoints = pointX + pointY;
+  const distance = Math.sqrt(sumPoints);
+  return distance;
 }
 
 /**
@@ -583,8 +587,9 @@ function getRandomInteger(/* min, max */) {
  * @example:
  * 3, 4 => 5
  */
-function getHypotenuse(/* a, b */) {
-  throw new Error('Not implemented');
+function getHypotenuse(a, b) {
+  const c = Math.hypot(a, b);
+  return c;
 }
 
 /**
